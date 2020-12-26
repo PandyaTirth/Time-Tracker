@@ -1,0 +1,150 @@
+.section-heading {
+    text-align: center;
+    font-weight: normal;
+    font-size: 2em;
+    padding-top: 50px;
+}
+
+.slider-container {
+    margin: 0 auto;
+    position: relative;
+    width: 75%;
+    padding-bottom: 32%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.slide_card {
+    position: absolute;
+    width: 78%;
+    height: 78%;
+    display: flex;
+}
+
+#i1, #i2, #i3 {
+    display: none;
+}
+
+.slide_nav {
+    width: 100%;
+    bottom: 15%;
+    height: 11px;
+    position: absolute;
+    text-align: center;
+    z-index: 99;
+    cursor: default;
+}
+
+.dots {
+    width: 12px;
+    height: 12px;
+    margin: 0 4px;
+    position: relative;
+    border-radius: 50%;
+    display: inline-block;
+    background: lightgray;
+}
+
+.slide_card {
+    z-index: -1;
+    display: flex;
+}
+
+#i1:checked ~ #one,
+#i2:checked ~ #two, 
+#i3:checked ~ #three {
+    z-index: 9
+}
+
+#i1:checked ~ .slide_nav #dot1,
+#i2:checked ~ .slide_nav #dot2, 
+#i3:checked ~ .slide_nav #dot3 {
+    background: rgba(0, 0, 0, .7);
+}
+
+.item-1 {
+    align-self: center;
+}
+
+.item-2 {
+    align-self: center;
+}
+
+.para {
+    line-height: 30px;
+    text-align: left;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+.slide_head {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+}
+
+@media screen and (max-width: 1120px) {
+    .slider-container {
+        width: 100%;
+    }
+    .slider-container {
+        text-align: center;
+        height: 600px;
+    }
+    .slide_nav {
+        bottom: 15%;
+        width: 100%;
+    }
+    .slide_card {
+        display: flex;
+        flex-direction: column;
+    }
+    .item-1 {
+        order: 2;
+    }
+    .item-2 {
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .slide_head {
+        order: 2;
+    }
+    .para {
+        order: 1;
+    }
+}
+@media screen and (max-width: 380px) {
+    .slider-container {
+        text-align: center;
+        height: 900px;
+    }
+    .slide_nav {
+        bottom: 15%;
+        width: 100%;
+    }
+    .slide_card {
+        display: flex;
+        flex-direction: column;
+    }
+    .item-1 {
+        order: 2;
+    }
+    .item-2 {
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .slide_head {
+        order: 2;
+    }
+    .para {
+        order: 1;
+    }
+}
